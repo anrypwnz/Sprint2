@@ -1,5 +1,5 @@
-# Sprint 1
-Yandex Praktikum MF Sprint 1 (chat)
+# Sprint 2
+Yandex Praktikum MF Sprint 2 (chat)
 
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a4bfac32-c843-4bc1-81ef-45813ccabd54/deploy-status)](https://app.netlify.com/sites/colloquy-chat/deploys)
