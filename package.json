@@ -1,0 +1,41 @@
+{
+  "name": "yap-sprint1",
+  "engines": {
+    "node": "12.16.0"
+  },
+  "version": "1.0.0",
+  "description": "Yandex Praktikum sprint1 (chat)",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run clear && parcel build ./static/**/*.html --no-source-maps --no-cache --public-url ./ && nodemon -e js,html,less ./app.js",
+    "dev": "npm run clear && parcel ./static/*.html",
+    "develop": "nodemon -e js,html,less app.js",
+    "build": "npm run clear && parcel build ./static/**/*.html --no-source-maps --no-cache --public-url ./",
+    "clear": "rm -rf dist .cache"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anrypwnz/yap-sprint1.git"
+  },
+  "keywords": [],
+  "author": "anrypwnz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anrypwnz/yap-sprint1/issues"
+  },
+  "homepage": "https://github.com/anrypwnz/yap-sprint1#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "less": "^4.1.1",
+    "normalize.css": "^8.0.1",
+    "nunjucks": "^3.2.3",
+    "parcel-bundler": "^1.12.5",
+    "parcel-plugin-nunjucks": "^2.2.2",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "postcss": "^8.2.8",
+    "autoprefixer": "^10.2.5"
+  }
+}

@@ -1,0 +1,69 @@
+@import "../style/variables";
+// modal window send file
+.modal-options {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  min-width: 160px;
+  position: absolute;
+  bottom: 65px;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid @lightgray;
+  color: @font-color;
+  background-color: @darkblue;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.14);
+  z-index: 5;
+  display: none;
+
+  &__point {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 12px;
+  }
+
+  svg {
+    margin-right: 8px;
+  }
+  &_show {
+    display: flex;
+  }
+}
+
+// modal window warning
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 6;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  display: none;
+
+  &__content {
+    background-color: @darkblue;
+    border: 1px solid @lightgray;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 320px;
+    padding: 40px;
+    border-radius: 8px;
+  }
+
+  &__link {
+    color: @lightblue;
+    font-size: 12px;
+    text-decoration: @lightblue underline;
+    cursor: pointer;
+    margin: 20px 0;
+  }
+}

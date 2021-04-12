@@ -1,0 +1,280 @@
+@import './variables.less';
+@import '../chat-page/chat-page.less';
+@import "../modal/modal.less";
+// * {
+//   border: 1px solid pink;
+// }
+
+body {
+  background-color: @background;
+  color: @font-color;
+  font-family: @font-family;
+  font-weight: 500;
+}
+
+input {
+  background-color: #1B2E42;
+  border: none;
+  outline: none;
+  color: @font-color;
+  padding: 5px;
+
+  &-webkit-autofill {
+    background-color: #999999;
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: #FFFAFA;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.root {
+  //max-width: 1280px;
+  min-height: 97vh;
+  display: flex;
+  justify-content: center;
+  //margin: auto;
+  width: 100%;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  align-self: auto;
+  border: 1px solid @lightgray;
+  border-radius: 5px;
+}
+
+.sidebar {
+  border-right: 1px solid @lightgray;
+  width: 320px;
+  padding: 10px;
+  &__list {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+// chat options
+.chat {
+  &__wrap {
+    padding: 12px;
+    border-radius: 12px;
+    width: 50%;
+    margin-bottom: 12px;
+
+    &_get {
+      background-color: #2B5278;
+      border-top-left-radius: 0;
+    }
+
+    &_send {
+      background-color: #1067BC;
+      align-self: flex-end;
+      border-bottom-right-radius: 0;
+    }
+
+    &_date {
+      color: @gray;
+      align-self: center;
+      font-size: 12px;
+      text-align: center;
+    }
+  }
+
+  &__text {
+    font-size: 12px;
+    line-height: 15px;
+    margin: 0;
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+// btns, inputs
+.input {
+  &__search {
+    border: none;
+    background-color: @darkblue;
+    color: @font-color;
+    outline: none;
+    padding: 10px;
+
+    &::placeholder {
+      color: @gray;
+      font-weight: 500;
+    }
+
+    &:focus {
+      box-shadow: 0 0 5px rgb(0, 100, 179);
+    }
+  }
+}
+
+.button {
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+// user badge
+.badge {
+  &__name {
+    font-size: 13px;
+    margin: 4px 0;
+  }
+
+  &__avatar {
+    width: 47px;
+    height: 47px;
+    border-radius: 50px;
+    background-color: @darkblue;
+  }
+}
+
+// login-page.html > form
+.form {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  width: 100%;
+
+  &-wrap {
+    border-radius: 12px;
+    border: 1px solid @lightgray;
+    min-width: 320px;
+    padding: 30px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+  }
+
+  &-group {
+    position: relative;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  &-label {
+    font-size: 11px;
+    color: @gray;
+    position: absolute;
+    top: -10px;
+    left: 5px;
+  }
+
+  &-input {
+    border-bottom: 1px solid @lightblue;
+    width: 97%;
+
+    &::placeholder {
+      color: @gray;
+    }
+  }
+
+  &-btn {
+    &-submit {
+      padding: 12px;
+      background-color: @lightblue;
+      border-radius: 8px;
+    }
+
+    &-option {
+      background-color: transparent;
+      color: @lightblue;
+      margin-top: 20px;
+    }
+
+    &-cancel {
+      background-color: @tomato;
+      border-radius: 8px;
+      padding: 12px;
+    }
+  }
+
+  &-error {
+    color: @tomato;
+    font-size: 11px;
+    position: absolute;
+    top: 32px
+  }
+}
+
+// user-info.html
+.sidebar-back {
+  border-right: 1px solid @lightblue;
+  display: flex;
+  align-items: center;
+  padding: 18px;
+
+  &__btn {
+    cursor: pointer;
+  }
+}
+
+.profile {
+  &-content {
+    width: 100%;
+    padding: 60px;
+  }
+
+  &-avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: @darkblue;
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    margin-bottom: 40px;
+  }
+
+  &-title {
+    margin-bottom: 40px;
+  }
+
+  &-form-wrap {
+    border: 0;
+  }
+
+  &-form {
+    align-items: center;
+    max-width: 510px;
+  }
+
+  &-form-group {
+    margin-bottom: 20px;
+  }
+
+  &-form-input {
+    text-align: right;
+    color: @gray;
+  }
+
+  &-form-label {
+    font-size: 13px;
+    top: 6px;
+    color: @font-color;
+  }
+
+  &-btn {
+    width: 50%;
+    margin-top: 30px;
+  }
+}
+
