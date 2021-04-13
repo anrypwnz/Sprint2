@@ -7,13 +7,13 @@ console.log(data);
 const app = express();
 const PORT = 3000;
 
-nunjucks.configure('dist', {
+nunjucks.configure('static', {
   autoescape: true,
   express: app
 });
 
 app.get('/', (req, res) => {
-  return res.render(path.resolve(__dirname + '/dist/index.html'), data);
+  return res.render(path.resolve(__dirname + '/static/index.html'), data);
 });
 
 // app.get('*', (req, res) => {

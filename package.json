@@ -1,5 +1,5 @@
 {
-  "name": "yap-sprint1",
+  "name": "colloquy-chat",
   "engines": {
     "node": "12.16.0"
   },
@@ -10,7 +10,7 @@
     "start": "npm run clear && parcel build ./static/**/*.html --no-source-maps --no-cache --public-url ./ && nodemon -e js,html,less ./app.js",
     "dev": "npm run clear && parcel ./static/*.html",
     "develop": "nodemon -e js,html,less app.js",
-    "build": "npm run clear && parcel build ./static/**/*.html --no-source-maps --no-cache --public-url ./",
+    "build": "parcel build ./static/*.html && parcel build ./static/**/*.html",
     "clear": "rm -rf dist .cache"
   },
   "repository": {
@@ -25,17 +25,25 @@
   },
   "homepage": "https://github.com/anrypwnz/yap-sprint1#readme",
   "dependencies": {
+    "@types/nunjucks": "^3.1.4",
     "express": "^4.17.1",
     "less": "^4.1.1",
     "normalize.css": "^8.0.1",
     "nunjucks": "^3.2.3",
     "parcel-bundler": "^1.12.5",
-    "parcel-plugin-nunjucks": "^2.2.2",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "typescript": "^4.2.4"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
+    "autoprefixer": "^10.2.5",
     "cssnano": "^4.1.10",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
     "postcss": "^8.2.8",
-    "autoprefixer": "^10.2.5"
+    "stylelint": "^13.12.0",
+    "stylelint-config-standard": "^21.0.0"
   }
 }
