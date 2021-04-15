@@ -1,5 +1,3 @@
-import nunjucks from 'nunjucks';
-
 const modal = document.querySelector(".modal");
 const menuBtn = document.querySelector(".info-panel__menu-btn");
 const editChatMenu = document.querySelector(".info-panel__menu");
@@ -7,9 +5,9 @@ const addFileMenu = document.querySelector(".modal-options");
 const addFileBtn = document.querySelector(".msg-panel__add-file");
 const msgPanel = document.forms.msgPanel;
 const registerForm = document.forms.register;
-// get msg form data
-addFormListener(msgPanel);
-addFormListener(registerForm);
+
+if(msgPanel) addFormListener(msgPanel);
+if(registerForm) addFormListener(registerForm);
 
 if (modal) {
   modal.addEventListener("mousedown", (e) => {
@@ -46,11 +44,3 @@ function addFormListener(form) {
     console.log('###### no-form:', form);
   }
 }
-
-nunjucks.configure({ autoescape: true })
-const chatCell = nunjucks.render('test.html ')
-console.log(chatCell)
-
-// // const chatPage = nunjucks.render('profile.html')
-// // nunjucks.render('404.html')
-// //console.log(renderHTML)

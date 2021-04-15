@@ -7,10 +7,10 @@
   "description": "Yandex Praktikum sprint1 (chat)",
   "main": "index.js",
   "scripts": {
-    "start": "npm run clear && parcel build ./static/**/*.html --no-source-maps --no-cache --public-url ./ && nodemon -e js,html,less ./app.js",
+    "start": "npm run clear && parcel ./static/index.ejs --no-source-maps --no-cache --public-url ./",
     "dev": "npm run clear && parcel ./static/*.html",
     "develop": "nodemon -e js,html,less app.js",
-    "build": "parcel build ./static/*.html && parcel build ./static/**/*.html",
+    "build": "parcel build ./static/*.ejs && parcel build ./static/**/*.ejs",
     "clear": "rm -rf dist .cache"
   },
   "repository": {
@@ -26,6 +26,8 @@
   "homepage": "https://github.com/anrypwnz/yap-sprint1#readme",
   "dependencies": {
     "@types/nunjucks": "^3.1.4",
+    "chokidar": "^3.5.1",
+    "ejs": "^3.1.6",
     "express": "^4.17.1",
     "less": "^4.1.1",
     "normalize.css": "^8.0.1",
@@ -44,6 +46,7 @@
     "eslint-plugin-import": "^2.22.1",
     "postcss": "^8.2.8",
     "stylelint": "^13.12.0",
-    "stylelint-config-standard": "^21.0.0"
+    "stylelint-config-standard": "^21.0.0",
+    "parcel-plugin-ejs-template": "^0.2.0"
   }
 }

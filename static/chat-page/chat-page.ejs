@@ -2,17 +2,18 @@
     <div class="main">
         <div class="sidebar">
             <div class="toolbar">
-                <a href="../profile.html" class="toolbar__btn js-profile">Профиль ></a>
+                <!-- <a href="../static/pages/profile.html" class="toolbar__btn js-profile">Профиль ></a> -->
                 <input type="text" class="input__search toolbar__search" placeholder="Поиск">
             </div>
 
             <ul class="sidebar__list">
-                {% include './chat-cell.html' %}
-                {% include './chat-cell.html' %}
-                {% include './chat-cell.html' %}
-                {% include './chat-cell.html' %}
-                {% include './chat-cell.html' %}
-                {% include './chat-cell.html' %}
+                <%- include('./chat-cell.ejs') %>
+                <%- include('./chat-cell.ejs') %>
+                <%- include('./chat-cell.ejs') %>
+                <%- include('./chat-cell.ejs') %>
+                <%- include('./chat-cell.ejs') %>
+                <%- include('./chat-cell.ejs') %>
+                <%- include('./chat-cell.ejs') %>
             </ul>
         </div>
         <div class="content">
@@ -22,7 +23,7 @@
 
                     </div>
                     <p class="badge__name">
-                        {{ name or 'Николаич'}}
+                        Николаич
                     </p>
                 </div>
 
@@ -32,20 +33,20 @@
                         <circle cx="1.5" cy="8" r="1.5" fill="#8AC4FF"/>
                         <circle cx="1.5" cy="14" r="1.5" fill="#8AC4FF"/>
                     </svg>
-                    {% include '../modal/modal-options.html' %}
+                    <%- include('../modal/modal-options.ejs') %>
                 </div>
             </header>
 
             <div class="content__chat">
                 <!--               <span class="content__info-msg">Выберите чат чтобы отправить сообщение</span> -->
-                {% include './chat-msg.html' %}
+                <%- include('./chat-msg.ejs') %>
 
 
             </div>
 
             <form class="content__msg-panel" name="msgPanel" id="msgPanel">
 
-                {% include './modal-add-file.html' %}
+                <%- include('./modal-add-file.ejs') %>
 
                 <input type="text" class="input__search msg-panel__search" name="message" placeholder="Сообщение">
                 <button type="submit" class="button msg-panel__send-file" name="submitMessage">
