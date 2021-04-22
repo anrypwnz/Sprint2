@@ -1,3 +1,5 @@
+import './styles/styles.less'
+
 const modal = document.querySelector(".modal");
 const menuBtn = document.querySelector(".info-panel__menu-btn");
 const editChatMenu = document.querySelector(".info-panel__menu");
@@ -6,8 +8,8 @@ const addFileBtn = document.querySelector(".msg-panel__add-file");
 const msgPanel = document.forms.msgPanel;
 const registerForm = document.forms.register;
 
-if(msgPanel) addFormListener(msgPanel);
-if(registerForm) addFormListener(registerForm);
+if (msgPanel) addFormListener(msgPanel);
+if (registerForm) addFormListener(registerForm);
 
 if (modal) {
   modal.addEventListener("mousedown", (e) => {
@@ -41,6 +43,6 @@ function addFormListener(form) {
       console.log(`send message form data: `, data);
     });
   } else {
-    console.log('###### no-form:', form);
+    console.log("###### no-form:", form);
   }
 }

@@ -7,9 +7,9 @@
   "description": "Yandex Praktikum sprint1 (chat)",
   "main": "index.js",
   "scripts": {
-    "start": "npm run clear && parcel ./static/index.ejs --no-source-maps --no-cache --public-url ./",
-    "dev": "npm run clear && parcel ./static/*.html",
-    "develop": "nodemon -e js,html,less app.js",
+    "start": "npm run clear && parcel ./src/index.html --no-source-maps --no-cache --public-url ./",
+    "dev": "npm run clear && parcel serve ./src/index.html",
+    "develop": "nodemon -e js,html,less server.js",
     "build": "parcel build ./static/*.ejs && parcel build ./static/**/*.ejs",
     "clear": "rm -rf dist .cache"
   },

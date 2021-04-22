@@ -1,15 +1,11 @@
 const express = require('express');
-const nunjucks = require('nunjucks');
 const path = require('path');
 
 const data = require('./static/testData');
 const app = express();
 const PORT = 3000;
 
-nunjucks.configure('dist', {
-  autoescape: true,
-  express: app
-});
+app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
   return res.render(path.resolve(__dirname + '/dist/index.html'), data);

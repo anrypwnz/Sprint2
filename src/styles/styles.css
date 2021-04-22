@@ -145,25 +145,6 @@
 .msg-panel__add-file_show {
   display: none;
 }
-.error-page {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  align-self: center;
-}
-.error-page__title {
-  font-size: 160px;
-  font-weight: normal;
-  letter-spacing: 20px;
-}
-.error-page__subtitle {
-  font-size: 28px;
-  font-weight: normal;
-}
-.error-page__back {
-  color: #8AC4FF;
-  margin-top: 20px;
-}
 .modal-options {
   display: none;
   flex-flow: column;
@@ -224,40 +205,6 @@
   text-decoration: #8AC4FF underline;
   cursor: pointer;
   margin: 20px 0;
-}
-body {
-  background-color: #1B2E42;
-  color: #FFFAFA;
-  font-family: 'Tahoma', sans-serif;
-  font-weight: 500;
-}
-input {
-  background-color: #1b2e42;
-  border: none;
-  outline: none;
-  color: #FFFAFA;
-  padding: 5px;
-}
-input-webkit-autofill {
-  background-color: #999;
-}
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-  transition: background-color 5000s ease-in-out 0s;
-  -webkit-text-fill-color: #fffafa;
-}
-button {
-  border: none;
-  outline: none;
-  cursor: pointer;
-}
-.root {
-  min-height: 97vh;
-  display: flex;
-  justify-content: center;
-  width: 100%;
 }
 .main {
   display: grid;
@@ -335,63 +282,6 @@ button {
   height: 47px;
   border-radius: 50px;
   background-color: #364f6b;
-}
-.form {
-  display: flex;
-  justify-content: center;
-  flex-flow: column;
-  width: 100%;
-}
-.form-wrap {
-  border-radius: 12px;
-  border: 1px solid rgba(138, 196, 255, 0.3);
-  min-width: 320px;
-  padding: 30px;
-  display: flex;
-  flex-flow: column;
-  justify-content: space-between;
-  align-items: center;
-  margin: auto;
-}
-.form-group {
-  position: relative;
-  width: 100%;
-  margin-bottom: 40px;
-}
-.form-label {
-  font-size: 11px;
-  color: #999999;
-  position: absolute;
-  top: -10px;
-  left: 5px;
-}
-.form-input {
-  border-bottom: 1px solid #8AC4FF;
-  width: 97%;
-}
-.form-input::placeholder {
-  color: #999999;
-}
-.form-btn-submit {
-  padding: 12px;
-  background-color: #8AC4FF;
-  border-radius: 8px;
-}
-.form-btn-option {
-  background-color: transparent;
-  color: #8AC4FF;
-  margin-top: 20px;
-}
-.form-btn-cancel {
-  background-color: #EC4336;
-  border-radius: 8px;
-  padding: 12px;
-}
-.form-error {
-  color: #EC4336;
-  font-size: 11px;
-  position: absolute;
-  top: 32px;
 }
 .sidebar-back {
   border-right: 1px solid #8AC4FF;

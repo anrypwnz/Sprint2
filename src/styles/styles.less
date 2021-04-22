@@ -2,48 +2,6 @@
 @import '../chat-page/chat-page.less';
 @import "../modal/modal.less";
 
-body {
-  background-color: @background;
-  color: @font-color;
-  font-family: @font-family;
-  font-weight: 500;
-}
-
-input {
-  background-color: #1b2e42;
-  border: none;
-  outline: none;
-  color: @font-color;
-  padding: 5px;
-
-  &-webkit-autofill {
-    background-color: #999;
-  }
-}
-
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-  transition: background-color 5000s ease-in-out 0s;
-  -webkit-text-fill-color: #fffafa;
-}
-
-button {
-  border: none;
-  outline: none;
-  cursor: pointer;
-}
-
-.root {
-  //max-width: 1280px;
-  min-height: 97vh;
-  display: flex;
-  justify-content: center;
-  //margin: auto;
-  width: 100%;
-}
-
 .main {
   display: grid;
   grid-template-columns: 340px 1fr;
@@ -142,76 +100,6 @@ button {
     height: 47px;
     border-radius: 50px;
     background-color: @darkblue;
-  }
-}
-
-// login-page.html > form
-.form {
-  display: flex;
-  justify-content: center;
-  flex-flow: column;
-  width: 100%;
-
-  &-wrap {
-    border-radius: 12px;
-    border: 1px solid @lightgray;
-    min-width: 320px;
-    padding: 30px;
-    display: flex;
-    flex-flow: column;
-    justify-content: space-between;
-    align-items: center;
-    margin: auto;
-  }
-
-  &-group {
-    position: relative;
-    width: 100%;
-    margin-bottom: 40px;
-  }
-
-  &-label {
-    font-size: 11px;
-    color: @gray;
-    position: absolute;
-    top: -10px;
-    left: 5px;
-  }
-
-  &-input {
-    border-bottom: 1px solid @lightblue;
-    width: 97%;
-
-    &::placeholder {
-      color: @gray;
-    }
-  }
-
-  &-btn {
-    &-submit {
-      padding: 12px;
-      background-color: @lightblue;
-      border-radius: 8px;
-    }
-
-    &-option {
-      background-color: transparent;
-      color: @lightblue;
-      margin-top: 20px;
-    }
-
-    &-cancel {
-      background-color: @tomato;
-      border-radius: 8px;
-      padding: 12px;
-    }
-  }
-
-  &-error {
-    color: @tomato;
-    font-size: 11px;
-    position: absolute;
-    top: 32px;
   }
 }
 
