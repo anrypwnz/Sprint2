@@ -91,11 +91,15 @@ button {
   left: 5px;
 }
 .form-input {
-  border-bottom: 1px solid #8AC4FF;
+  border-bottom: 1px solid;
+  border-bottom-color: #8AC4FF;
   width: 97%;
 }
 .form-input::placeholder {
   color: #999999;
+}
+.form-input_error {
+  border-bottom-color: #EC4336;
 }
 .form-btn-submit {
   padding: 12px;
@@ -117,4 +121,5 @@ button {
   font-size: 11px;
   position: absolute;
   top: 32px;
+  display: none;
 }

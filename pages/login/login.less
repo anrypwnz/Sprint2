@@ -34,11 +34,16 @@
   }
 
   &-input {
-    border-bottom: 1px solid @lightblue;
+    border-bottom: 1px solid;
+    border-bottom-color: @lightblue;
     width: 97%;
 
     &::placeholder {
       color: @gray;
+    }
+
+    &_error {
+      border-bottom-color: @tomato;
     }
   }
 
@@ -67,5 +72,6 @@
     font-size: 11px;
     position: absolute;
     top: 32px;
+    display: none;
   }
 }

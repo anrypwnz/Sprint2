@@ -1,0 +1,62 @@
+<main class='root'>
+    <div class="main">
+        <div class="sidebar">
+            <div class="toolbar">
+                <a href="../profile/profile.ejs" class="toolbar__btn js-profile">Профиль ></a>
+                <input type="text" class="input__search toolbar__search" placeholder="Поиск">
+            </div>
+
+            <ul class="sidebar__list">
+                <%- include('./chat-cell.ejs') %>
+                <%- include('./chat-cell.ejs') %>
+                <%- include('./chat-cell.ejs') %>
+                <%- include('./chat-cell.ejs') %>
+                <%- include('./chat-cell.ejs') %>
+                <%- include('./chat-cell.ejs') %>
+                <%- include('./chat-cell.ejs') %>
+            </ul>
+        </div>
+        <div class="content">
+            <header class="content__info-panel">
+                <div class="info-panel__card">
+                    <div class="info-panel__avatar">
+
+                    </div>
+                    <p class="badge__name">
+                        Николаич
+                    </p>
+                </div>
+
+                <div class="info-panel__menu-btn">
+                    <svg width="3" height="16" viewBox="0 0 3 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="1.5" cy="2" r="1.5" fill="#8AC4FF"/>
+                        <circle cx="1.5" cy="8" r="1.5" fill="#8AC4FF"/>
+                        <circle cx="1.5" cy="14" r="1.5" fill="#8AC4FF"/>
+                    </svg>
+                    <%- include('../../src/modal/modal-options.ejs') %>
+                </div>
+            </header>
+
+            <div class="content__chat">
+                <span class="content__info-msg">Выберите чат чтобы отправить сообщение</span>
+                <%- include('./chat-msg.ejs') %>
+            </div>
+
+            <form class="content__msg-panel" name="msgPanel" id="msgPanel">
+
+                <%- include('./modal-add-file.ejs') %>
+
+                <input type="text" class="input__search msg-panel__search" name="message" placeholder="Сообщение">
+                <button type="submit" class="button msg-panel__send-file" name="submitMessage">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="14" cy="14" r="14" fill="#8AC4FF"/>
+                        <rect x="8" y="13.2" width="11" height="1.6" fill="#1B2E42"/>
+                        <path d="M15 9L19 14L15 19" stroke="#1B2E42" stroke-width="1.6"/>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </div>
+</main>
+
+<script src="chat.ts"></script>
