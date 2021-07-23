@@ -87,7 +87,7 @@ button {
   font-size: 11px;
   color: #999999;
   position: absolute;
-  top: -10px;
+  top: 0;
   left: 5px;
 }
 .form-input {
