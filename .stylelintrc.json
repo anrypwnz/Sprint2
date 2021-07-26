@@ -2,5 +2,11 @@
   "extends": "stylelint-config-standard",
   "ignoreFiles": [
     "dist/*"
-  ]
+  ],
+  "plugins":  [
+    "stylelint-order"
+  ],
+  "rules": {
+    "selector-type-no-unknown": null
+  }
 }

@@ -11,7 +11,9 @@
     "dev": "npm run clear && parcel serve ./src/index.html",
     "develop": "nodemon -e js,html,less server.js",
     "build": "parcel build ./static/*.ejs && parcel build ./static/**/*.ejs",
-    "clear": "rm -rf dist .cache"
+    "clear": "rm -rf dist .cache",
+    "lint:css": "npx stylelint '**/*.css'",
+    "lint:css-fix": "npx stylelint '**/*.css' --fix"
   },
   "repository": {
     "type": "git",
@@ -46,7 +48,8 @@
     "eslint-plugin-import": "^2.22.1",
     "parcel-plugin-ejs-template": "^0.2.0",
     "postcss": "^8.2.8",
-    "stylelint": "^13.12.0",
-    "stylelint-config-standard": "^21.0.0"
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-order": "^4.1.0"
   }
 }

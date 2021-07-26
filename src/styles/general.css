@@ -1,19 +1,22 @@
 body {
-  background-color: #1B2E42;
-  color: #FFFAFA;
+  background-color: #1b2e42;
+  color: #fffafa;
   font-family: 'Tahoma', sans-serif;
   font-weight: 500;
 }
+
 input {
   background-color: #1b2e42;
   border: none;
   outline: none;
-  color: #FFFAFA;
+  color: #fffafa;
   padding: 5px;
 }
+
 input-webkit-autofill {
   background-color: #999;
 }
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -21,43 +24,52 @@ input:-webkit-autofill:active {
   transition: background-color 5000s ease-in-out 0s;
   -webkit-text-fill-color: #fffafa;
 }
+
 button {
   border: none;
   outline: none;
   cursor: pointer;
 }
+
 .root {
   min-height: 97vh;
   display: flex;
   justify-content: center;
   width: 100%;
 }
+
 .page-list li {
   margin-top: 12px;
   list-style-type: none;
   font-size: 20px;
 }
+
 .page-list li a {
-  color: #FFFAFA;
+  color: #fffafa;
 }
+
 .page-list li a:hover {
   color: #999;
 }
+
 .error-page {
   display: flex;
   flex-flow: column;
   align-items: center;
 }
+
 .error-page__title {
   font-size: 160px;
   font-weight: normal;
   letter-spacing: 20px;
 }
+
 .error-page__subtitle {
   font-size: 28px;
   font-weight: normal;
 }
+
 .error-page__back {
-  color: #8AC4FF;
+  color: #8ac4ff;
   margin-top: 20px;
 }
